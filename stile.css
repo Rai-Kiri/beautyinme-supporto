@@ -1,0 +1,90 @@
+/* Foglio di stile unico per le due pagine. Palette presa da design/build.py,
+   così il sito di supporto somiglia all'app invece di sembrare un modulo. */
+
+:root {
+  --bg: #FBF6F3;
+  --surface: #FFFFFF;
+  --border: #EDDFD8;
+  --text: #2A2124;
+  --text2: #6F6167;
+  --accent: #A85C74;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16110F;
+    --surface: #211A18;
+    --border: #372C29;
+    --text: #F5EDE8;
+    --text2: #B6A7A1;
+    --accent: #E9A3B6;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 32px 20px 64px;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main { max-width: 680px; margin: 0 auto; }
+
+h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 21px;
+  letter-spacing: -0.01em;
+  margin: 40px 0 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+h2:first-of-type { border-top: none; padding-top: 0; }
+
+p, li { color: var(--text); margin: 0 0 14px; }
+li { margin-bottom: 8px; }
+
+.occhiello {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 6px;
+}
+
+.sommario { color: var(--text2); font-size: 19px; margin-bottom: 32px; }
+
+.riquadro {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 24px 0;
+}
+
+.riquadro p:last-child, .riquadro ul:last-child { margin-bottom: 0; }
+
+a { color: var(--accent); }
+
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--text2);
+  font-size: 15px;
+}
+
+/* Sezione in inglese per il revisore App Store: compatta, chiaramente separata. */
+.en { color: var(--text2); font-size: 15px; }
+.en h2 { font-size: 18px; }
